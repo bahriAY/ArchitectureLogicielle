@@ -1,8 +1,12 @@
-package fr.esiea.unique.binome.name.dictionary;
+package fr.esiea.unique.bahri.ay.dictionary;
 
 /**
  * Created on 16/01/17.
  */
 public interface IDictionary {
-    boolean isWord(String word);
+    static boolean isWord(String word) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+    
 }
