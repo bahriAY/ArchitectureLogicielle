@@ -13,7 +13,7 @@ public static int AreLetters=270;
    	String elem = new String(LettresUtilisés[i]);
 	    char UsedChar = elem.charAt(0); //conversion String char	    	    		
 	    	if(Pot.PotCommun.contains(UsedChar)){
-	    		System.out.println("Il y a bien cette lettres dans le POT:");
+	    		System.out.println("Il y a bien cette lettre dans le POT:");
 	    		System.out.println(UsedChar);
 	    		AreLetters= 1;		
 	    	}

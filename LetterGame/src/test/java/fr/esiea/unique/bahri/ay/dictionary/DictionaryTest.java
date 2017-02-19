@@ -3,7 +3,6 @@ package fr.esiea.unique.bahri.ay.dictionary;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.esiea.unique.bahri.ay.dictionary.IDictionary;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -13,8 +12,6 @@ import static org.junit.Assert.assertTrue;
  */
 public class DictionaryTest {
 
-    private IDictionary dictionary;
-
     @Before
     public void setup() {
         //TODO
@@ -22,7 +19,7 @@ public class DictionaryTest {
 
     @Test
     public void testIsWord() {
-        assertTrue(dictionary.isWord("maman"));
-        assertFalse(dictionary.isWord("namam"));
+        assertTrue(TDictionnaire.isWord("maman"));
+        assertFalse(TDictionnaire.isWord("namam"));
     }
 }

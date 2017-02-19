@@ -24,7 +24,7 @@ public class Dictionnaire {
     } catch (Exception ex) {
         ex.printStackTrace();
     }
-   System.out.println("Nombre de mots identique dans le dictionnaire:");
+   System.out.println("Nombre de mots identiques dans le dictionnaire:");
    System.out.println(result);
    
 }

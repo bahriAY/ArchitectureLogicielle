@@ -11,4 +11,11 @@ public class Pioche {
 	//System.out.println(c);	
 	}
 	
+	public  Pioche(){
+		 char lettrepioché1 = GetPioche();
+		 Pot.AjoutDansPot(lettrepioché1);
+	     char lettrepioché2 = GetPioche();
+	     Pot.AjoutDansPot(lettrepioché2);		
+	}
+	
 }

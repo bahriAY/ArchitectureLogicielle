@@ -2,8 +2,11 @@ package fr.esiea.unique.bahri.ay.game;
 
 import java.io.FileNotFoundException;
 import java.util.HashSet;
-import java.util.Scanner;
+
+import fr.esiea.unique.bahri.ay.decor.Decorations;
 import fr.esiea.unique.bahri.ay.dictionary.Dictionnaire;
+import fr.esiea.unique.bahri.ay.joueur.CutWord;
+import fr.esiea.unique.bahri.ay.joueur.Saisie;
 import fr.esiea.unique.bahri.ay.plateforme.Pioche;
 import fr.esiea.unique.bahri.ay.plateforme.Pot;
 import fr.esiea.unique.bahri.ay.verificationMot.VerifyLettres;
@@ -12,43 +15,27 @@ public class jeudelettre {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		HashSet<String> Joueur1  = new HashSet<String>();
-		boolean Piochedouble = true ;
+		HashSet<String> Joueur1  = new HashSet<String>(); 
 		 
-	while ( Joueur1.size() < 10){
+	while ( Joueur1.size() < 10){ 
 			
-			
-			// REGLE DE PIOCHE A VOIR
-		    if(Piochedouble){
-			 char lettrepioché1 = Pioche.GetPioche();
-			 Pot.AjoutDansPot(lettrepioché1);
-		     char lettrepioché2 = Pioche.GetPioche();
-		     Pot.AjoutDansPot(lettrepioché2);
-		    }
-    
-		    System.out.println("♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦");
-		    System.out.println("- - - - - - - - - - - - - - ");		    		    
-		    System.out.println("Voici le pot commun:");		    
-		    System.out.println (Pot.PotCommun);		
+		    new Pioche();
+		    
+		    new Decorations();
+
+		    new Saisie();
+		    String Essai = Saisie.Essai;
+		    
+		    new Dictionnaire(Essai);
+		    int SiMotDansDicos = Dictionnaire.result;	    
 		    
 		    
-			@SuppressWarnings("resource")
-			Scanner essaie = new Scanner(System.in);
-		    System.out.println("Essayes de faire un mot:");
-		    String Essai = essaie.nextLine();
-		    System.out.println("Tu as tenté le mot:\t"+Essai);
-		    
-		    new Dictionnaire(Essai);// On verifie l'existence du mot dans le dictionnaire
-		    
-		    
-		    
-		  // public static String[] LettresUtilisés = null; //tableau de chaînes qui comportera chaque lettres utilisé    
-		    if(Dictionnaire.result == 1){		    	
+		    if(SiMotDansDicos == 1){// Le mot entré est dans le dictionnaire		    	
+		    	//new CutWord(Essai);
 		    	String[] LettresUtilisés = null; //tableau de chaînes qui comportera chaque lettres utilisé    	
 			    String str = Essai; // le mot essayé Essai devient str	
 			    LettresUtilisés = str.split(""); //on decoupe le string
   	
-			    
 			    // IF Lettre sont lettres du pots
 			    new  VerifyLettres(str);
 			    if(VerifyLettres.AreLetters == 1){
@@ -68,9 +55,11 @@ public class jeudelettre {
 		    }// IF all it's ok	   
 		    else{
 		    System.out.println("Actuellement tu as trouvé\t"+Joueur1.size() +"\tmots");
-		    System.out.println("- - - - - - - - - - - - - - ");
-		    System.out.println("♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ \n");}
-		    
+
+		   /* System.out.println("- - - - - - - - - - - - - - ");
+		    System.out.println("♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ \n");*/
+		    }
+		      
 		} //while
 		
 		
