@@ -6,6 +6,7 @@ import java.util.Scanner;
 import fr.esiea.unique.bahri.ay.dictionary.Dictionnaire;
 import fr.esiea.unique.bahri.ay.plateforme.Pioche;
 import fr.esiea.unique.bahri.ay.plateforme.Pot;
+import fr.esiea.unique.bahri.ay.verificationMot.VerifyLettres;
 
 public class jeudelettre {
 
@@ -39,12 +40,19 @@ public class jeudelettre {
 		    
 		    new Dictionnaire(Essai);// On verifie l'existence du mot dans le dictionnaire
 		    
-		    String[] LettresUtilisés = null; //tableau de chaînes qui comportera chaque lettres utilisé    
+		    
+		    
+		  // public static String[] LettresUtilisés = null; //tableau de chaînes qui comportera chaque lettres utilisé    
 		    if(Dictionnaire.result == 1){		    	
-		    	
+		    	String[] LettresUtilisés = null; //tableau de chaînes qui comportera chaque lettres utilisé    	
 			    String str = Essai; // le mot essayé Essai devient str	
 			    LettresUtilisés = str.split(""); //on decoupe le string
   	
+			    
+			    // IF Lettre sont lettres du pots
+			    new  VerifyLettres(str);
+			    if(VerifyLettres.AreLetters == 1){
+			    	//System.out.println(VerifyLettres.AreLetters);
 		    	 for(int i = 0; i< LettresUtilisés.length;i++){
 		    	String elem = new String(LettresUtilisés[i]);
 			    char UsedChar = elem.charAt(0); //conversion String char
@@ -56,7 +64,7 @@ public class jeudelettre {
 				 Pot.AjoutDansPot(lettrepioché1);				 
 			     System.out.println ("Bien joué! Voici tes mots trouvés"+ Joueur1);			
 	
-
+			    }//IF non tricheur
 		    }// IF all it's ok	   
 		    else{
 		    System.out.println("Actuellement tu as trouvé\t"+Joueur1.size() +"\tmots");
