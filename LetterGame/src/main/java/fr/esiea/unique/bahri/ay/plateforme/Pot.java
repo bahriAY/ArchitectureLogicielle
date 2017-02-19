@@ -12,6 +12,12 @@ public class Pot {
 	}
 	
 	public static void RetireDuPot(char lettre){
-	 PotCommun.remove(lettre);
+		for (int i = 0; i < PotCommun.size(); i++) {
+		    char elem = PotCommun.get(i);
+		    if( elem == lettre){
+		    	PotCommun.remove(i);
+		    }
+		}
+		}
 	}
-}
+
