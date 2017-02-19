@@ -4,8 +4,10 @@ import java.io.File;
 import java.util.Scanner;
 
 public class Dictionnaire {
-	public static int  result=0;
+	public static int  result=270;
+	
 	public Dictionnaire(String tente){
+		result=0;
     try {
 
         Scanner input = new Scanner( new File("c:/Users/Bahri/Documents/LetterGame/LetterGame/src/main/resources/dico.txt"));
@@ -22,7 +24,8 @@ public class Dictionnaire {
     } catch (Exception ex) {
         ex.printStackTrace();
     }
-    System.out.println(result);
-
+   System.out.println("Nombre de mots identique dans le dictionnaire:");
+   System.out.println(result);
+   
 }
 	}
