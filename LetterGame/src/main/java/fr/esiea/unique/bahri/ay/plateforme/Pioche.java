@@ -11,11 +11,20 @@ public class Pioche {
 	//System.out.println(c);	
 	}
 	
-	public  Pioche(){
+	public  Pioche(int Type){
+		if(Type == 2){
+		
+		System.out.println("< Deux Lettres piochées>");
+
 		 char lettrepioché1 = GetPioche();
 		 Pot.AjoutDansPot(lettrepioché1);
 	     char lettrepioché2 = GetPioche();
-	     Pot.AjoutDansPot(lettrepioché2);		
+	     Pot.AjoutDansPot(lettrepioché2);}
+		else{
+		System.out.println("< Une Lettre piochée>");
+		 char lettrepioché1 = GetPioche();
+	     Pot.AjoutDansPot(lettrepioché1);
+		}
 	}
 	
 }

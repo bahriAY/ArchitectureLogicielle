@@ -15,56 +15,51 @@ public class jeudelettre {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		HashSet<String> Joueur1  = new HashSet<String>(); 
+		HashSet<String> Joueur1  = new HashSet<String>(); // Create a player
 		 
 	while ( Joueur1.size() < 10){ 
-			
-		    new Pioche();
+		
+		    new Pioche(2); // Check 2 letters and add them to PotCommun
 		    
-		    new Decorations();
-
-		    new Saisie();
+			new Decorations(); //Print some details
+		    
+		    new Saisie();   // Player try a word
 		    String Essai = Saisie.Essai;
 		    
-		    new Dictionnaire(Essai);
+		    new Dictionnaire(Essai); //Check in the dictionary if it exists
 		    int SiMotDansDicos = Dictionnaire.result;	    
-		    
-		    
-		    if(SiMotDansDicos == 1){// Le mot entré est dans le dictionnaire		    	
-		    	//new CutWord(Essai);
-		    	String[] LettresUtilisés = null; //tableau de chaînes qui comportera chaque lettres utilisé    	
-			    String str = Essai; // le mot essayé Essai devient str	
-			    LettresUtilisés = str.split(""); //on decoupe le string
-  	
-			    // IF Lettre sont lettres du pots
-			    new  VerifyLettres(str);
-			    if(VerifyLettres.AreLetters == 1){
-			    	//System.out.println(VerifyLettres.AreLetters);
-		    	 for(int i = 0; i< LettresUtilisés.length;i++){
-		    	String elem = new String(LettresUtilisés[i]);
-			    char UsedChar = elem.charAt(0); //conversion String char
-			     Pot.RetireDuPot(UsedChar); // suppression des lettres utilisé du potcomuun
-			     }//FOR
-		    	 
-		    	 Joueur1.add(Essai); // Ajoute le mot trouvé dans Joueur1 	
-				 char lettrepioché1 = Pioche.GetPioche(); // Le joueur a bon donc il pioche 1X
-				 Pot.AjoutDansPot(lettrepioché1);				 
-			     System.out.println ("Bien joué! Voici tes mots trouvés"+ Joueur1);			
+		    	    
+		    if(SiMotDansDicos == 1){  // If tried word exists
+		    	
+		    	new CutWord(Essai); //Decompose the word into several chars and add them into LettreUtilisés
+		    	String[] LettresUtilisés = CutWord.TableauLettres;
+		    	
+			    new  VerifyLettres(Essai); //Check if used letters are from Potcommun
+			    
+			    if(VerifyLettres.AreLetters == 1){ // If chars are in PotCommun
+			    	
+			    	Pot.EnleverCharUtilisé(LettresUtilisés); //Remove used chars from PotCommun
+			    			    	 			    	
+		    	    Joueur1.add(Essai);  // Player Win 1 word
+				 
+		    	    new Pioche(1); // Player check 1 letter
+				 
+		    	    System.out.println ("Bien joué! Voici tes mots trouvés"+ Joueur1);	// To congratulate	
 	
-			    }//IF non tricheur
+			    }//IF VerifyLetters
+			    
+			    
 		    }// IF all it's ok	   
+		    
 		    else{
-		    System.out.println("Actuellement tu as trouvé\t"+Joueur1.size() +"\tmots");
-
-		   /* System.out.println("- - - - - - - - - - - - - - ");
-		    System.out.println("♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ \n");*/
+		    System.out.println("Actuellement tu as trouvé\t"+Joueur1.size() +"\tmots"); // Current situation
 		    }
 		      
 		} //while
 		
 		
 		if(Joueur1.size() == 10){
-			System.out.println("BRAVO TU as gagné!");
+			System.out.println("BRAVO TU as gagné!");//Final congratulations
 		}
 		
 	}//main
