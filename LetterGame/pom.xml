@@ -7,7 +7,7 @@
   <version>0.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Bahri AY : Letter Game</name>
+  <name>Bahri AY Fabrice LAURENT : Letter Game</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

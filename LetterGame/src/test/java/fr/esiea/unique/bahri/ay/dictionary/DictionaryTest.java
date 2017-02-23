@@ -15,11 +15,12 @@ public class DictionaryTest {
     @Before
     public void setup() {
         //TODO
+    	
     }
 
     @Test
     public void testIsWord() {
-        assertTrue(TDictionnaire.isWord("maman"));
-        assertFalse(TDictionnaire.isWord("namam"));
+        assertTrue(Dictionnaire.isWord("maman"));
+        assertFalse(Dictionnaire.isWord("namam"));
     }
 }

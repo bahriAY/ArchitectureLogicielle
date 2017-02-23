@@ -24,19 +24,18 @@ public class jeudelettre {
 			new Decorations(); //Print some details
 		    
 		    new Saisie();   // Player try a word
-		    String Essai = Saisie.Essai;
-		    
-		    new Dictionnaire(Essai); //Check in the dictionary if it exists
-		    int SiMotDansDicos = Dictionnaire.result;	    
+		    String Essai = Saisie.Essai;  
 		    	    
-		    if(SiMotDansDicos == 1){  // If tried word exists
+		    if(Dictionnaire.isWord(Essai)){  // If tried word exists
 		    	
 		    	new CutWord(Essai); //Decompose the word into several chars and add them into LettreUtilisés
 		    	String[] LettresUtilisés = CutWord.TableauLettres;
 		    	
 			    new  VerifyLettres(Essai); //Check if used letters are from Potcommun
 			    
-			    if(VerifyLettres.AreLetters == 1){ // If chars are in PotCommun
+			   // new VerifyUnicity(Essai);
+			    
+			    if(VerifyLettres.AreLetters == 1){ // If chars are in PotCommun && Unique==true
 			    	
 			    	Pot.EnleverCharUtilisé(LettresUtilisés); //Remove used chars from PotCommun
 			    			    	 			    	
