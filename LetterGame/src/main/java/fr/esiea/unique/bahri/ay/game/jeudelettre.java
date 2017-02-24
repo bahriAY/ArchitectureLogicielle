@@ -35,7 +35,7 @@ public class jeudelettre {
 			    
 			   // new VerifyUnicity(Essai);
 			    
-			    if(VerifyLettres.AreLetters == 1){ // If chars are in PotCommun && Unique==true
+			    if(VerifyLettres.AllLettersAre){ // If chars are in PotCommun && Unique==true
 			    	
 			    	Pot.EnleverCharUtilisé(LettresUtilisés); //Remove used chars from PotCommun
 			    			    	 			    	
