@@ -18,6 +18,7 @@ public static boolean unique;
 		//unique = false;
 		
 	
+		@SuppressWarnings("rawtypes")
 		Iterator e = Joueur1.iterator();
 		//System.out.println("verif blocage");
 		unique=true;
@@ -31,6 +32,7 @@ public static boolean unique;
 				  }
 				  else{
 					  unique = true;
+					  System.out.println("Ce mot est unique");
 					  
 				  }
 				  e.next();
