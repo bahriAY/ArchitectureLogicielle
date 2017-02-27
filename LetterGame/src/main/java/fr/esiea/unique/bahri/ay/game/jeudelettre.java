@@ -12,6 +12,7 @@ import fr.esiea.unique.bahri.ay.joueur.Saisie;
 import fr.esiea.unique.bahri.ay.plateforme.Pioche;
 import fr.esiea.unique.bahri.ay.plateforme.Pot;
 import fr.esiea.unique.bahri.ay.verificationMot.VerifyLettres;
+import fr.esiea.unique.bahri.ay.verificationMot.VerifyUnicity;
 
 public class jeudelettre {
 	
@@ -52,11 +53,11 @@ static HashSet<String> ActifPlayer;
 			    
 			    
 			    
-			   // new VerifyUnicity(Essai);
+			    new VerifyUnicity(Essai, ActifPlayer);
 			    
 			    
-			    
-			    if(VerifyLettres.AllLettersAre){ // If chars are in PotCommun && Unique==true
+			  
+			    if(VerifyLettres.AllLettersAre && VerifyUnicity.unique){ // If chars are in PotCommun && Unique==true
 			    	
 			    	Pot.EnleverCharUtilisé(LettresUtilisés); //Remove used chars from PotCommun
 			    			    	 			    	
