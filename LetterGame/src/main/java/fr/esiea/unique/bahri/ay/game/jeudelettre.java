@@ -17,28 +17,32 @@ import fr.esiea.unique.bahri.ay.verificationMot.VerifyUnicity;
 public class jeudelettre {
 	
 public static boolean Jeton=true ;
+
 static HashSet<String> ActifPlayer;
 
-	public static void main(String[] args) throws FileNotFoundException {
-		//HashSet<String> Joueur1  = new HashSet<String>(); // Create a player
-		
-		
-		 do{ //! Joueur1.size() < 10
-			
-			new DefPlayer(Jeton);
-			ActifPlayer  = DefPlayer.JoueurActif;
-			
-			new Pioche(2); // Check 2 letters and add them to PotCommun
+
+public static void main(String[] args) throws FileNotFoundException {
+
+	do{ //! Joueur1.size() < 10
 			new Decorations(); //Print some details
-
-
-			System.out.println("Voici les Mots du Joueur1:");
-			System.out.println(Player.Joueur1);
 			
-			System.out.println("Voici les Mots du Joueur2:");
-			System.out.println(Player.Joueur2);
+			new DefPlayer(Jeton); // En fonction du jeton on determine à qui est le tour
+			ActifPlayer  = DefPlayer.JoueurActif;
+
+			System.out.println("C'est au tour de "+DefPlayer.nom);
+
+			new Pioche(2); // Check 2 letters and add them to PotCommun
 			
-		    System.out.println("C'est au tour de "+DefPlayer.nom);
+		    System.out.println("Voici le pot commun:");		    
+		    System.out.println (Pot.PotCommun);	
+
+			System.out.println("Voici les Mots du Joueur1:"+Player.Joueur1);
+			//System.out.println(Player.Joueur1);
+			
+			System.out.println("Voici les Mots du Joueur2:"+Player.Joueur2);
+			//System.out.println(Player.Joueur2);
+			
+		   // System.out.println("C'est au tour de "+DefPlayer.nom);
 
 		    
 		    new Saisie();   // Player try a word

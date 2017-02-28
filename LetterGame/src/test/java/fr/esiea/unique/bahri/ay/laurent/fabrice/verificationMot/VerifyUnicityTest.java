@@ -15,12 +15,13 @@ public class VerifyUnicityTest {
 	public void IsWordAlreadyExistsInJoueur(){
 	
 	Player.Joueur1.add("je"); // Ajout de "je" dans la liste des mots trouvé du J1
+	
 	new VerifyUnicity("je", Player.Joueur1);// Je verifie si le mot a déjà été trouvé(ajouté)
     assertFalse(VerifyUnicity.unique); 
    
     
 	new VerifyUnicity("tu", Player.Joueur1);  // je verifie si tu est déjà dans le tableau
-	assertTrue(VerifyUnicity.unique);
+	assertTrue(VerifyUnicity.unique);  
 	
 	}
 }

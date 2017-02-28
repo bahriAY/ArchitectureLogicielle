@@ -8,7 +8,6 @@ public class Pioche {
 	Random r = new Random();
 	char c = (char) (r.nextInt(26) + 'a');	
 	return c;
-	//System.out.println(c);	
 	}
 	
 	public  Pioche(int Type){

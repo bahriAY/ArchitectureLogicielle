@@ -24,6 +24,7 @@ public class Pot {
 		    char elem = PotCommun.get(i);
 		    if( elem == lettre){
 		    	PotCommun.remove(i);
+		    	break;
 		    }
 		}
 		}

@@ -29,13 +29,13 @@ public static boolean unique;
 				  if (Joueur1.contains(essai)){
 					  unique = false;
 					  System.out.println("Ce mot a déjà été trouvé");
+					  break;
 				  }
 				  else{
 					  unique = true;
-					  System.out.println("Ce mot est unique");
-					  
+					  System.out.println("Ce mot n'est pas encore trouvé");
+					  break;
 				  }
-				  e.next();
 			}
 			
 		} 
