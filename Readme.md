@@ -40,4 +40,8 @@ S: Une classe doit avoir une et une seule responsabilité, c'est ce que nous pou
   
 Pour compiler et lancer le projet, il faut compiler la classe jeudelettre qui est la classe principale du jeu.
 
+Remarque: Pensez à modifier le chemin qui mène vers le dictionnaire dans le fichier Dictionnaire.java à la ligne 18:
+Scanner input = new Scanner( new File("MyPath/dico.txt"));
+
+
 
