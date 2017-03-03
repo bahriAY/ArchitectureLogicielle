@@ -1,6 +1,8 @@
 # TP Architecture Logicielle / Inf4043 - 2017 - Jeux de lettres
 
  GROUPE:	Bahri AY  -  Fabrice LAURENT
+ 
+ 
  CLASSE:	TCSI1
  
  
@@ -43,4 +45,4 @@ Pour compiler et lancer le projet, il faut compiler la classe jeudelettre qui es
   - mlab.cours[at]gmail[dot]com (TP à rendre à cette adresse)
   - ledoyen.esiea[at]gmail[dot]com
 
-- Merci d'envoyer **un mail dont le sujet est `nom_binome1 | nom_binome2 | url_github`**
+- Merci d'envoyer **un mail dont le sujet est `ay_bahri | laurent_fabrice | url_github`**
