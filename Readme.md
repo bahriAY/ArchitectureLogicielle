@@ -28,7 +28,7 @@ Responsabilité de chaque package:
 
 Trois principes SOLID ou Design Pattern:
 
-	S: Une classe doit avoir une et une seule responsabilité, c'est ce que nous pouvons observer grace à nos classes VerifyUnicity ou VerifyLettres, qui ont chacune une fonction.
+S: Une classe doit avoir une et une seule responsabilité, c'est ce que nous pouvons observer grace à nos classes VerifyUnicity ou VerifyLettres, qui ont chacune une fonction.
 	La classe VerifyLettres doit seulement verifier si le mot entré par le joueur comporte bien des lettres qui sont dans le pot commun.
 	La classe VerifyUnicity doit seulement verifier si le mot entré par le joueur n'a pas déjà été trouvé par lui meme.
 	
@@ -40,9 +40,4 @@ Trois principes SOLID ou Design Pattern:
   
 Pour compiler et lancer le projet, il faut compiler la classe jeudelettre qui est la classe principale du jeu.
 
- 
-# TP Architecture Logicielle / Inf4043 - 2017 - Jeux de lettres
-  - mlab.cours[at]gmail[dot]com (TP à rendre à cette adresse)
-  - ledoyen.esiea[at]gmail[dot]com
 
-- Merci d'envoyer **un mail dont le sujet est `ay_bahri | laurent_fabrice | url_github`**
