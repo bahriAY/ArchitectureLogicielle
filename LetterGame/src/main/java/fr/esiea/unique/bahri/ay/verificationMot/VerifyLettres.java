@@ -1,6 +1,6 @@
 package fr.esiea.unique.bahri.ay.verificationMot;
 
-import fr.esiea.unique.bahri.ay.plateforme.Pot;
+import gestionPot.Pot;
 
 public class VerifyLettres {
 	public static boolean AllLettersAre = false;
@@ -27,8 +27,9 @@ public class VerifyLettres {
 	    	else{
 	    		System.out.println("Il n'y a pas cette lettre dans le POT!!: ");
 	    		System.out.println(UsedChar);
+	    		
 	    		AllLettersAre = false;
-	    		//break;
+	    		break;
 	    	}
 	   
    	 }//FOR

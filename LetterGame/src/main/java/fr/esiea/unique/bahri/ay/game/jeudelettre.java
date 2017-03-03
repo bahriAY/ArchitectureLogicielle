@@ -5,14 +5,14 @@ import java.util.HashSet;
 
 import fr.esiea.unique.bahri.ay.decor.Decorations;
 import fr.esiea.unique.bahri.ay.dictionary.Dictionnaire;
-import fr.esiea.unique.bahri.ay.joueur.CutWord;
 import fr.esiea.unique.bahri.ay.joueur.DefPlayer;
 import fr.esiea.unique.bahri.ay.joueur.Player;
-import fr.esiea.unique.bahri.ay.joueur.Saisie;
-import fr.esiea.unique.bahri.ay.plateforme.Pioche;
-import fr.esiea.unique.bahri.ay.plateforme.Pot;
+import fr.esiea.unique.bahri.ay.saisiedujoueur.CutWord;
+import fr.esiea.unique.bahri.ay.saisiedujoueur.Saisie;
 import fr.esiea.unique.bahri.ay.verificationMot.VerifyLettres;
 import fr.esiea.unique.bahri.ay.verificationMot.VerifyUnicity;
+import gestionPot.Pioche;
+import gestionPot.Pot;
 
 public class jeudelettre {
 	
@@ -36,11 +36,7 @@ public static void main(String[] args) throws FileNotFoundException {
 		    System.out.println("Voici le pot commun:");		    
 		    System.out.println (Pot.PotCommun);	
 
-			System.out.println("Voici les Mots du Joueur1:"+Player.Joueur1);
-			//System.out.println(Player.Joueur1);
-			
-			System.out.println("Voici les Mots du Joueur2:"+Player.Joueur2);
-			//System.out.println(Player.Joueur2);
+
 			
 		   // System.out.println("C'est au tour de "+DefPlayer.nom);
 
@@ -82,7 +78,11 @@ public static void main(String[] args) throws FileNotFoundException {
 		    Jeton = !Jeton;
 		    System.out.println("Actuellement tu as trouvé\t"+ActifPlayer.size() +"\tmots"); // Current situation
 		    }
-		      
+			System.out.println("Voici les Mots du Joueur1:"+Player.Joueur1);
+			//System.out.println(Player.Joueur1);
+			
+			System.out.println("Voici les Mots du Joueur2:"+Player.Joueur2);
+			//System.out.println(Player.Joueur2);		      
 		}while(ActifPlayer.size() < 10); //while
 		
 		

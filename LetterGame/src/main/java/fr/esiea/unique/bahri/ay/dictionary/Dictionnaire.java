@@ -21,6 +21,7 @@ public static boolean isWord(String tente){
             String line = input.nextLine();
             //System.out.println(line);
             if(tente.equals(line)){
+            	System.out.println("Ce mot est bien dans le dictionnaire");
             	return true;
             }
         }

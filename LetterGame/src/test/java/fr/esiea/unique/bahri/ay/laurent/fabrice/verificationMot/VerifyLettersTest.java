@@ -4,8 +4,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import fr.esiea.unique.bahri.ay.plateforme.Pot;
 import fr.esiea.unique.bahri.ay.verificationMot.VerifyLettres;
+import gestionPot.Pot;
 public class VerifyLettersTest {
 	
 	
@@ -16,7 +16,7 @@ public class VerifyLettersTest {
         assertTrue(VerifyLettres.AreLetters("b")); 
         // on a testé si il y à "b" dans le pot
         
-        assertFalse(VerifyLettres.AreLetters("bar"));
+        assertFalse(VerifyLettres.AreLetters("p"));
         // Si y'a toute les lettre du string "bar" dans le pot commun
 	}
 }
